@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=500, initial=1.0" user-scalable=no>
+	<title>Aralashma project</title>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<style>
+        @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
+		body {
+			display:  flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+            font-family: Montserrat;
+		}
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		p {
+			font-size: 30px;
+			font-weight:  700;
+            text-align: center;
+		}
+		canvas {
+			width:  1000px;
+			margin: 0 0 50px 0;
+		}
+		.made_by {
+			font-size:  20px;
+			font-weight:  500;
+			margin:  50px 0 30px 0 ;
+		}
+
+        @media screen and (max-width: 500px) {
+            body {
+                display:  flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width:  100%;
+                font-family: Montserrat;
+            }
+            .container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 90%;
+            }
+            p {
+                font-size: 30px;
+                font-weight:  700;
+            }
+            canvas {
+                width:  100%;
+                margin: 0 0 50px 0;
+            }
+            .made_by {
+                font-size:  20px;
+                font-weight:  500;
+                margin:  50px 0 30px 0;
+                padding: 0 20px;
+            }
+        }
+	</style>
+</head>
+<body>
+<div class="container">
+<p class="welcome">Har hil aralashmalarning muzlash grafigi (°C)</p>
+<canvas id="myChart" width="1000" height="700"></canvas>
+<p class="welcome">Har hil aralashmalarning erish grafigi (t = min, 20°C)</p>
+<canvas id="mChart" width="1000" height="700"></canvas>
+<script>
+const ctx = document.getElementById('myChart').getContext('2d');
+const myChart = new Chart(ctx, {
+type: 'bar',
+data: {
+    labels: ['Oddiy suv', 'Suv + tuz', 'Suz + shakar', 'Suv + spirt', 'Suv + glitserin'],
+    datasets: [{
+        label: 'Oddiy suv',
+        data: [0.1, 2, 2.7, 7.5, 12.5],
+        backgroundColor: [
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)',
+            'rgba(153, 102, 255, 0.2)',
+            'rgba(255, 159, 64, 0.2)'
+        ],
+        borderColor: [
+            'rgba(255, 99, 132, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(153, 102, 255, 1)',
+            'rgba(255, 159, 64, 1)'
+        ],
+        borderWidth: 1
+    }]
+},
+options: {
+    scales: {
+        y: {
+            beginAtZero: false 
+        }
+    }
+}
+});
+const mctx = document.getElementById('mChart').getContext('2d');
+const mChart = new Chart(mctx, {
+type: 'bar',
+data: {
+    labels: ['Oddiy suv', 'Suv + tuz', 'Suz + shakar', 'Suv + spirt', 'Suv + glitserin'],
+    datasets: [{
+        label: 'Oddiy suv',
+        data: [75, 40, 60, 30, 15],
+        backgroundColor: [
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)',
+            'rgba(153, 102, 255, 0.2)',
+            'rgba(255, 159, 64, 0.2)'
+        ],
+        borderColor: [
+            'rgba(255, 99, 132, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(153, 102, 255, 1)',
+            'rgba(255, 159, 64, 1)'
+        ],
+        borderWidth: 1
+    }]
+},
+options: {
+    scales: {
+        y: {
+            beginAtZero: false 
+        }
+    }
+}
+});
+</script>
+</div>
+<div class="made_by">Made by: Mahmud Nosirov, Zufarbek Muhtorov and Muhriddin Nosirov</div>
+</body>
+</html>

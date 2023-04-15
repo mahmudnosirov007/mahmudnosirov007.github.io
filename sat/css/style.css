@@ -1,0 +1,295 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Montserrat;
+}
+
+body {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 1800px;
+}
+
+.page {
+  width: 1200px;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: space-between;
+      -ms-flex-align: space-between;
+          align-items: space-between;
+  margin: 30px 0 0 0;
+}
+
+.page .heading {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 700;
+  font-size: 25px;
+  margin: 0 0 30px 0;
+}
+
+.page .parts {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.page .part {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 200px;
+  height: auto;
+}
+
+.page .part__heading {
+  font-weight: 700;
+  font-size: 20px;
+  margin: 0 0 15px 0;
+}
+
+.page .part__answers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 30px;
+}
+
+.page .part__answers .answer_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.page .part__answers .number {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  width: 30px;
+  text-align: center;
+  position: relative;
+  bottom: 1px;
+}
+
+.page .part__answers .answer {
+  width: 60px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 20px;
+  border: 0;
+  border-bottom: 1px solid #F0F2F5;
+  outline: none;
+  text-align: center;
+  margin: 0 0 0 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.page .part__answers select.answer {
+  width: 60px;
+  height: 28px;
+  line-height: 30px;
+  font-size: 20px;
+  border: 0;
+  border-bottom: 1px solid #F0F2F5;
+  outline: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: left;
+  margin: 0 0 0 10px;
+  padding: 0 0 0 10px;
+}
+
+.page .part__answers select.answer option {
+  text-align: left;
+  font-weight: 700;
+}
+
+.page .part__answers .incorrect_place {
+  background-color: white;
+  position: relative;
+  top: 2px;
+  line-height: 30px;
+}
+
+.page .part__answers .is_correct {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 300;
+  margin: 0 0 0 10px;
+}
+
+.page .part__answers .is_correct div {
+  width: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid #F0F2F5;
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+}
+
+.page .part__answers .is_correct .correct {
+  color: green;
+  border-right: 0;
+}
+
+.page .part__answers .is_correct .incorrect {
+  color: red;
+}
+
+.page .part__answers .total {
+  height: auto;
+  border: 1px solid #F0F2F5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 20px 0 0 0px;
+}
+
+.page .part__answers .total__text {
+  width: 100%;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.page .part__answers .total__answers {
+  width: 100%;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.page .part__answers .total__answers div {
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  font-weight: 600;
+}
+
+.page .part__answers .total__correct {
+  background-color: limegreen;
+}
+
+.page .part__answers .total__incorrect {
+  background-color: red;
+}
+
+.page .part__answers .total__score {
+  width: 100%;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #EFEFEF;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    height: auto;
+    width: 300px;
+  }
+  .page {
+    width: 300px;
+  }
+  .parts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 0 30px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .parts .part {
+    width: 300px;
+    height: auto;
+    height: 1500px;
+  }
+}
